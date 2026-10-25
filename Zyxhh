@@ -1,0 +1,11 @@
+local vehicleSeat = script.Parent
+
+-- ตรวจสอบว่าเป็น VehicleSeat จริงๆ หรือไม่
+if vehicleSeat:IsA("VehicleSeat") then
+    -- ปรับแต่งค่าความเร็วและแรงบิดของรถที่นี่
+    vehicleSeat.MaxSpeed = 80     -- ความเร็วสูงสุด (ค่าปกติของ Roblox จะอยู่ที่ประมาณ 25)
+    vehicleSeat.Torque = 20000    -- แรงบิด (ทำให้รถเร่งออกตัวได้เร็วขึ้น ไม่ค่อยอืด)
+    vehicleSeat.TurnSpeed = 3     -- ความเร็วในการเลี้ยว (ปรับตามความชอบ)
+    
+    print("ตั้งค่าความเร็วรถสำเร็จ! ความเร็วสูงสุดคือ: " .. vehicleSeat.MaxSpeed)
+end
